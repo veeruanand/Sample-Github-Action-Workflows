@@ -1,0 +1,22 @@
+name: "Hello World Workflow"
+
+
+on: 
+    push:
+        branches:
+            - master
+            - production
+
+jobs:
+    hello_world:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Print hello world"
+              run: echo "Hello World!!!!"
+              
+            - name: "Print Current date and time"
+              run: date
+
+            - name: "Display OS Version"
+              run: cat /etc/os-release
+    
